@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Allow Quartz execution
+        run: chmod +x quartz/bootstrap-cli.mjs
+
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
